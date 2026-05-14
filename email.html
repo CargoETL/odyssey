@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            padding: 30px;
+            vertical-align: top;
+            font-family: sans-serif;
+        }
+        .image {
+            display: block;
+            margin-right: 40px;
+            margin-top: 10px;
+        }
+        .person {
+            max-width: 630px;
+        }
+        .person__name {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .properties {
+            width: 100%;
+        }
+        .properties td {
+            width: 33%;
+        }
+        .property {
+            display: flex;
+            align-items: center;
+            padding: 4px;
+        }
+        .property__icon {
+            margin-right: 8px;
+        }
+        .property__name {
+            font-size: 16px;
+            white-space: nowrap;
+        }
+        .person__separator {
+            display: block;
+            margin: 20px 0px;
+            width: 100%;
+            border: 0.5px solid #FFA202;
+            max-width: 360px;
+        }
+        .footer__title {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .footer__links {
+            margin-top: 20px;
+        }
+        .footer__link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+        .footer__link__icon {
+            margin-right: 8px;
+        }
+        .footer__link__text {
+            color: #000000;
+            white-space: nowrap;
+        }
+        .person__end-text {
+            color: #232E69;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .person__end-text span {
+            color: #FFA202;
+        }
+    </style>
+</head>
+<body>
+<table class="container">
+    <tr>
+        <td class="image">
+            <img src="https://cargoetl.github.io/odyssey/logo.png" width="185" height="115" alt="Odyssey Express LLC">
+        </td>
+        <td>
+            <table class="person">
+                <tr>
+                    <td class="person__name">Greetings, <strong>{brokerName}!</strong></td>
+                </tr>
+                <tr class="properties-row">
+                    <td>
+                        <table class="properties">
+                            <tr>
+                                <td>
+                                    <div class="property">
+                                        <div class="property__icon">
+                                            <img src="https://cargoetl.github.io/odyssey/rate.png" width="27"
+                                                 height="27" alt="$">
+                                        </div>
+                                        <div class="property__name">Rate <strong>${brokerPrice}</strong> or your best
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="property">
+                                        <div class="property__icon">
+                                            <img src="https://cargoetl.github.io/odyssey/left.png" width="27"
+                                                 height="27" alt="m">
+                                        </div>
+                                        <div class="property__name"><strong>{eta}</strong> left to you</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="property">
+                                        <div class="property__icon">
+                                            <img src="https://cargoetl.github.io/odyssey/mc.png" width="26" height="26"
+                                                 alt="MC">
+                                        </div>
+                                        <div class="property__name">MC <strong>1582295</strong></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="property">
+                                        <div class="property__icon">
+                                            <img src="https://cargoetl.github.io/odyssey/dims.png" width="27"
+                                                 height="28" alt="<>">
+                                        </div>
+                                        <div class="property__name">Dims <strong>{dims}</strong> in.</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="property">
+                                        <div class="property__icon">
+                                            <img src="https://cargoetl.github.io/odyssey/truck.png" width="27"
+                                                 height="27">
+                                        </div>
+                                        <div class="property__name">Truck is <strong>{miles}</strong> miles out</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="property">
+                                        <div class="property__icon">
+                                            <img src="https://cargoetl.github.io/odyssey/mc.png" width="26" height="26">
+                                        </div>
+                                        <div class="property__name">USDOT <strong>4131749</strong></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <hr class="person__separator"></hr>
+                    </td>
+                </tr>
+                <tr class="footer">
+                    <td>
+                        <div class="footer__title">
+                            [sign]<br>
+                            Company <strong>Odyssey Express LLC</strong>
+                        </div>
+                        <div class="footer__links">
+                            <a href class="footer__link">
+                                <div class="footer__link__icon">
+                                    <img src="https://cargoetl.github.io/odyssey/phone.png" width="24" height="24"
+                                         alt="Phone">
+                                </div>
+                                <div class="footer__link__text">+1 (267) 714 46 46</div>
+                            </a>
+
+                            <a href class="footer__link">
+                                <div class="footer__link__icon">
+                                    <img src="https://cargoetl.github.io/odyssey/addr.png" width="15" height="24"
+                                         alt="Address">
+                                </div>
+                                <div class="footer__link__text">4050 Skyron Dr A12 Doylestown, PA 18902</div>
+                            </a>
+
+                            <a href class="footer__link">
+                                <div class="footer__link__icon">
+                                    <img src="https://cargoetl.github.io/odyssey/web.png" width="22" height="22"
+                                         alt="W">
+                                </div>
+                                <div class="footer__link__text">odysseyexpress.us/</div>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <hr class="person__separator"></hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td><div class="person__end-text">All bids are valid <span>15 mins!</span></div></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
